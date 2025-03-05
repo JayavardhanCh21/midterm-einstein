@@ -325,3 +325,13 @@ footer {
 .blog1 {
   grid-area: blog1;
 }
+
+/* Footer  icons */
+
+.footer-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 30px;
+}
