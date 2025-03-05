@@ -335,3 +335,49 @@ footer {
   text-align: center;
   font-size: 30px;
 }
+
+/* Media Queries : */
+
+/*    "profile-image about-me"
+    "small-heading small-heading"
+    "anthology1 anthology1"
+    "anthology2 anthology2"
+    "anthology3 anthology3"
+    "hobbie-image hobbies"
+    "image-carousel1 image-carousel2"
+    "blog1 blog1"; */
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas:
+      "profile-image"
+      "about-me"
+      "small-heading"
+      "anthology1"
+      "anthology2"
+      "hobbies";
+  }
+
+  .anthology3,
+  .hobbie-image,
+  .blog1,
+  .image-carousel1,
+  .image-carousel2,
+  .footer-icons {
+    display: none;
+  }
+
+  .about-me ul li:nth-child(n + 4) {
+    display: none;
+  }
+  .anthology1 .anthology2 .content h2 {
+    display: block;
+  }
+
+  .anthology1 .anthology2 .content p {
+    display: none;
+  }
+}
