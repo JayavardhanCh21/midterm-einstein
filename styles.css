@@ -15,7 +15,6 @@ body {
   padding: 15px;
 }
 
-/* Header Section */
 header {
   background: #333;
   padding: 15px 20px;
@@ -85,7 +84,6 @@ nav ul li a:hover {
   font-size: 1.2em;
 }
 
-/* Profile image section */
 .profile-image {
   grid-area: profile-image;
   background-color: #66a5ad;
@@ -98,7 +96,6 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* About me section  */
 .about-me {
   grid-area: about-me;
   background: #c4dfe6;
@@ -109,7 +106,6 @@ nav ul li a:hover {
   font-style: italic;
 }
 
-/* Blog part-1 */
 .anthology1 {
   grid-area: anthology1;
   background: #66a5ad;
@@ -137,7 +133,6 @@ nav ul li a:hover {
   line-height: 1.8rem;
 }
 
-/* Blog - 2 */
 .anthology2 {
   grid-area: anthology2;
   background: #c4dfe6;
@@ -164,8 +159,6 @@ nav ul li a:hover {
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.8rem;
 }
-
-/* Blog - 3 */
 
 .anthology3 {
   grid-area: anthology3;
@@ -204,9 +197,7 @@ nav ul li a:hover {
   border-radius: 3px;
   cursor: pointer;
 }
-/* Anthology blog 4 */
 
-/* Hobbie Image  */
 .hobbie-image {
   grid-area: hobbie-image;
   background: #66a5ad;
@@ -217,7 +208,6 @@ nav ul li a:hover {
   border-radius: 5%;
 }
 
-/* Hobbies texts */
 .hobbies {
   grid-area: hobbies;
   background: #c4dfe6;
@@ -231,7 +221,6 @@ nav ul li a:hover {
   font-style: italic;
 }
 
-/* Award carousel */
 .image-carousel1 {
   text-align: center;
   padding: 20px;
@@ -262,7 +251,6 @@ nav ul li a:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*  Gallery items */
 .image-carousel2 {
   grid-area: image-carousel2;
   text-align: center;
@@ -326,8 +314,6 @@ footer {
   grid-area: blog1;
 }
 
-/* Footer  icons */
-
 .footer-icons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -336,16 +322,13 @@ footer {
   font-size: 30px;
 }
 
-/* Media Queries : */
-
-/*    "profile-image about-me"
-    "small-heading small-heading"
-    "anthology1 anthology1"
-    "anthology2 anthology2"
-    "anthology3 anthology3"
-    "hobbie-image hobbies"
-    "image-carousel1 image-carousel2"
-    "blog1 blog1"; */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 500px) {
   .container {
@@ -358,26 +341,71 @@ footer {
       "small-heading"
       "anthology1"
       "anthology2"
+      "anthology3"
       "hobbies";
   }
 
-  .anthology3,
   .hobbie-image,
   .blog1,
-  .image-carousel1,
   .image-carousel2,
-  .footer-icons {
+  .image-carousel1 {
     display: none;
   }
 
   .about-me ul li:nth-child(n + 4) {
     display: none;
   }
-  .anthology1 .anthology2 .content h2 {
+  .anthology1 .content h2 {
     display: block;
   }
 
-  .anthology1 .anthology2 .content p {
+  .anthology1 .content p {
     display: none;
+  }
+  .anthology2 .content h2 {
+    display: block;
+  }
+
+  .anthology2 .content p {
+    display: none;
+  }
+  .anthology3 .content h2 {
+    display: block;
+  }
+
+  .anthology3 .content p {
+    display: none;
+  }
+
+  .header-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+  }
+  .footer-icons {
+    display: inline-block;
+    justify-content: space-evenly;
+  }
+
+  .header-nav ul {
+    display: none;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .header-nav.active ul {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  #header-list li {
+    display: none;
+  }
+
+  .header-nav.active #header-list li:first-child {
+    display: block;
   }
 }
